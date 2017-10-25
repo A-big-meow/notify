@@ -3,6 +3,7 @@
   const template = `<section id="notify-container" class="notify-container">
                         <h3 class="notify-title"></h3>
                         <article class="notify-content"></article>
+                        <input id="sd" type="button" value="收到" onclick=""/>
                       </section>`
 
   // Help类，这里作用是一个utils
@@ -78,5 +79,22 @@
   } else {
     window.Notify = Notify
   }
-
+  window.onload=function(){
+    var box = document.getElementById("notify-container");  
+    var btn1 = document.getElementById("sd");
+    var confirm = document.getElementById("confirm");
+    var btn2 = document.getElementById("ok");
+    var btn3 = document.getElementById("gb");
+    btn1.onclick=function (){
+        /* box.style.display="none"; */
+        confirm.style.display="block";
+    }
+    btn2.onclick=function (){
+        box.style.display="none";
+        confirm.style.display="none"
+    }
+    btn3.onclick=function (){
+        confirm.style.display="none";
+    }
+  }    // box.style.display="block";}
 })()

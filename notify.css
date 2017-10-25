@@ -4,13 +4,67 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   position: fixed;
-  top: 10px;
-  right: 5px;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  margin: auto;
+  /*添加动画*/
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-name: fadeInLeft;
   /* display: none; */
 }
+/*CSS3动画*/
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .notify-title {
   border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+.notify-title:hover{
+  background-color:black;
+  color: white;
 }
 .notify-content {
   padding-left: 5px;
+  text-align: center;
+}
+#sd {
+  border-color: rgb(207, 205, 205);
+  background-color:  rgb(143, 143, 245);
+  top: 0px;
+  right: 1px;
+  position: absolute;
+  /* border:0; */
+  cursor: pointer;
+}
+#confirm{
+  width: 225px;
+  height: 100px;
+  text-align: center;
+  margin:150px auto; 
+  border:1px solid white;
+  display: none;
+  background:black;
+  opacity: 0.5;
+  color:white;
+}
+#nr{
+  padding:20px 0 20px 0;
+}
+#ok{
+  cursor: pointer;
+}
+#gb{
+  cursor: pointer;
 }
