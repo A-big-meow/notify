@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="notify.css">
+</head>
+<body>
+    <div id='confirm'>
+        <div id="nr">是否收到通知？</div>
+        <input id="ok" type="button" value="确定" onclick="b"/>
+        <input id="gb" type="button" value="取消" onclick="c"/>
+    </div>
+    <script src="notify.js" type="text/javascript" charset="utf-8">
+    </script>
+    <script>
+    const notify = new Notify({
+        title: '最新通知',
+        content: 'notify预览版发布'
+    })
+
+    notify.show({
+        autoHide: false,
+        // timeout: 50000
+    })
+</script>
+</body>
+</html>
